@@ -17,7 +17,7 @@ memory.pdf: memory.dat
 	gnuplot memory.gnuplot
 
 clean:
-	-rm -f memory memory.dat memory.pdf
+	-rm -f memory memory.dat
 
 distclean: clean
-	-rm -f memory.csv
+	-rm -f memory.csv memory.pdf
