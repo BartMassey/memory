@@ -11,14 +11,17 @@
 #include <string.h>
 #include <sys/time.h>
 
-#define PAGESIZE (4 * 1024 / 8)
+/* 4KB pages. */
+#define PAGESIZE (4 * 1024)
 
+/* Access modes. */
 enum access {
   ACCESS_READ,
   ACCESS_WRITE,
   ACCESS_RAW,   /* read-after-write */
 };
 
+/* Stride modes. */
 enum stride {
   STRIDE_1,
   STRIDE_PAGE,
